@@ -9,7 +9,9 @@ namespace TaskLogger_app
         {
             using (var connection = new SqliteConnection("Data Source= mydatabase.db"))
             {
+                
                 connection.Open();
+
 
                 var createTable = connection.CreateCommand();
                 createTable.CommandText = @"
@@ -17,8 +19,7 @@ namespace TaskLogger_app
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
                         name TEXT NOT NULL,
                         todolist TEXT NOT NULL
-                    );
-                ";
+                    );";
                 createTable.ExecuteNonQuery();
 
                 while (true)
@@ -33,16 +34,20 @@ namespace TaskLogger_app
                     switch (choice)
                     {
                         case "1":
-                            AddTask.addTask(connection);
+                            var addobj = new AddTask();
+                            addobj.addTask(connection);
                             break;
                         case "2":
-                            ViewTask.viewTask(connection);
+                            var viewobj = new ViewTask();
+                            viewobj.viewTask(connection);
                             break;
                         case "3":
-                            UpdateTask.updateTask(connection);
+                            var updateobj = new UpdateTask();
+                            updateobj.updateTask(connection);
                             break;
                         case "4":
-                            DeleteTask.deleteTask(connection);
+                            var deleteobj = new DeleteTask();
+                            deleteobj.deleteTask(connection);
                             break;
                         case "5":
                             System.Environment.Exit(0);

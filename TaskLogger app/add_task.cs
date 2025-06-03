@@ -6,7 +6,7 @@ namespace TaskLogger_app
 {
     class AddTask
     {
-        public static void addTask(SqliteConnection connection)
+        public void addTask(SqliteConnection connection)
         {
             try
             {

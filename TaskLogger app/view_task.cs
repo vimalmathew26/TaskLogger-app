@@ -7,7 +7,7 @@ namespace TaskLogger_app
     class ViewTask
 {
 
-    public static bool viewTask(SqliteConnection connection)
+    public bool viewTask(SqliteConnection connection)
     {
             try
             {

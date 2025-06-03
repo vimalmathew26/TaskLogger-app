@@ -5,7 +5,7 @@ namespace TaskLogger_app
 {
     class DeleteTask
     {
-        public static void deleteTask(SqliteConnection connection)
+        public void deleteTask(SqliteConnection connection)
         {
             try
             {

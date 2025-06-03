@@ -5,7 +5,7 @@ namespace TaskLogger_app
 {
     class UpdateTask
     {
-        public static void updateTask(SqliteConnection connection)
+        public void updateTask(SqliteConnection connection)
         {
             try
             {
