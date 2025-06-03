@@ -12,7 +12,6 @@ namespace TaskLogger_app
                 
                 connection.Open();
 
-
                 var createTable = connection.CreateCommand();
                 createTable.CommandText = @"
                     CREATE TABLE IF NOT EXISTS Task (
